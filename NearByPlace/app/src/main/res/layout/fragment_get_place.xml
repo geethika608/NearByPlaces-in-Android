@@ -1,0 +1,55 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    tools:context="geethika608.nearbyplace.GetPlace">
+
+    <FrameLayout
+        android:id="@+id/map_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <geethika608.nearbyplace.NoPaddingCardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/showlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="10dp"
+        card_view:cardBackgroundColor="@color/card_background"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="Show List"
+                android:textAllCaps="true"
+                android:textColor="@color/secondary_text"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </geethika608.nearbyplace.NoPaddingCardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/locations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:cacheColorHint="@android:color/transparent"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior" />
+
+</android.support.design.widget.CoordinatorLayout>
